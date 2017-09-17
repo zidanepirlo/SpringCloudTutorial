@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: springms-consumer-movie
+server:
+  port: 7901
+user: 
+  userServicePath: http://localhost:7900/simple/
+eureka:
+  client:
+#    healthcheck:
+#      enabled: true
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
