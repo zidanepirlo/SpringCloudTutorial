@@ -226,6 +226,14 @@ public class MsConsumerMovieApplication {
 ```
 
 
+## 四、下载地址
+
+``` 
+https://git.oschina.net/ylimhhmily/SpringCloudTutorial.git
+
+欢迎关注，您的肯定是对我最大的支持!!!
+```
+
 
 
 
