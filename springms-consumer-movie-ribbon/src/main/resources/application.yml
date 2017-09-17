@@ -1,0 +1,17 @@
+﻿spring:
+  application:
+    name: springms-consumer-movie-ribbon
+server:
+  port: 8010
+#做负载均衡的时候，不需要这个动态配置的地址
+#user:
+#  userServicePath: http://localhost:7900/simple/
+eureka:
+  client:
+#    healthcheck:
+#      enabled: true
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}

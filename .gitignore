@@ -9,3 +9,5 @@
 /springms-provider-user/target
 /springms-consumer-movie/*.iml
 /springms-consumer-movie/target
+/springms-consumer-movie-ribbon/*.iml
+/springms-consumer-movie-ribbon/target
