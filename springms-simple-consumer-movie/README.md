@@ -130,11 +130,11 @@ import org.springframework.web.client.RestTemplate;
 /**
  * 电影微服务Controller。
  *
- * @author HEHUI231
+ * @author hmilyylimh
  *
  * @version 0.0.1
  *
- * @date 2017/8/13
+ * @date 2017/9/17
  *
  */
 @RestController
@@ -151,7 +151,6 @@ public class MsSimpleConsumerMovieController {
         return this.restTemplate.getForObject(this.userServicePath + id, User.class);
     }
 }
-
 
 ```
 
