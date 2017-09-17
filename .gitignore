@@ -13,3 +13,5 @@
 /springms-consumer-movie-ribbon/target
 /springms-consumer-movie-ribbon-custom/*.iml
 /springms-consumer-movie-ribbon-custom/target
+/springms-consumer-movie-ribbon-properties/*.iml
+/springms-consumer-movie-ribbon-properties/target

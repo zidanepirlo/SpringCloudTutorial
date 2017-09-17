@@ -18,6 +18,7 @@
 | springms-consumer-movie      													| 8005 		|电影微服务，已注册 Eureka 	|
 | springms-consumer-movie-ribbon      											| 8010 		|电影微服务，使用 Ribbon 在客户端进行负载均衡  	|
 | springms-consumer-movie-ribbon-custom      									| 8020 		|电影微服务，定制 Ribbon 在客户端进行负载均衡 	|
+| springms-consumer-movie-ribbon-properties     									| 8030 		|电影微服务，配置 Ribbon 在客户端进行负载均衡 	|
 
 
 

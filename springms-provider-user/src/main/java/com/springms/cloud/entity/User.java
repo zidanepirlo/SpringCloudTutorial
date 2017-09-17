@@ -6,11 +6,11 @@ import java.math.BigDecimal;
 /**
  * 用户实体类。
  *
- * @author HEHUI231
+ * @author hmilyylimh
  *
  * @version 0.0.1
  *
- * @date 2017/8/13
+ * @date 2017/9/17
  *
  */
 @Entity
