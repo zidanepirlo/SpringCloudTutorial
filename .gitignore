@@ -5,3 +5,5 @@
 /springms-simple-consumer-movie/target
 /springms-discovery-eureka/*.iml
 /springms-discovery-eureka/target
+/springms-provider-user/*.iml
+/springms-provider-user/target

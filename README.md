@@ -14,6 +14,7 @@
 | springms-simple-provider-user      											| 8000 		|简单用户微服务 	|
 | springms-simple-consumer-movie      											| 8005 		|简单电影微服务 	|
 | springms-discovery-eureka      												| 8761 		|服务发现服务端EurekaServer微服务 	|
+| springms-provider-user															| 7900 		|用户服务类，已注册 Eureka 	|
 
 
 ## 三、功能模块
