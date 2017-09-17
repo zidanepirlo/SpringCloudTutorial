@@ -1,4 +1,4 @@
-# SpringCloud 用户服务类（添加服务注册，将用户微服务注册到 EurekaServer 中）
+# SpringCloud（第 004 篇）用户服务类（添加服务注册，将用户微服务注册到 EurekaServer 中）
 -
 
 ## 一、大致介绍

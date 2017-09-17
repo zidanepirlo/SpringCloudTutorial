@@ -1,4 +1,4 @@
-# SpringCloud 电影微服务，也注册到 EurekaServer 中，通过 Http 协议访问已注册到生态圈中的用户微服务
+# SpringCloud（第 005 篇）电影微服务，也注册到 EurekaServer 中，通过 Http 协议访问已注册到生态圈中的用户微服务
 -
 
 ## 一、大致介绍
