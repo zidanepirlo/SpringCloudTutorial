@@ -1,3 +1,5 @@
 /*.iml
 /springms-simple-provider-user/*.iml
 /springms-simple-provider-user/target
+/springms-simple-consumer-movie/*.iml
+/springms-simple-consumer-movie/target

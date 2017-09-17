@@ -11,6 +11,7 @@
 
 	<modules>
 		<module>springms-simple-provider-user</module>
+		<module>springms-simple-consumer-movie</module>
     </modules>
 
     <!-- 该套代码测试版本，首选 1.4.1.RELEASE 版本 -->

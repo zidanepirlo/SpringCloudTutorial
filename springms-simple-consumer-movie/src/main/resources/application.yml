@@ -1,0 +1,7 @@
+﻿spring:
+  application:
+    name: springms-simple-consumer-movie  #全部小写
+server:
+  port: 8005
+user: 
+  userServicePath: http://localhost:8000/simple/
