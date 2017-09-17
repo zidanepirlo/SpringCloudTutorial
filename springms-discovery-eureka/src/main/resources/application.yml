@@ -1,0 +1,29 @@
+# 配置 eureka 登录密码，输入地址 http://localhost:8761 时候就需要输入这个用户名密码登录进去
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+server:
+  port: 8761
+eureka:
+  datacenter: SpringCloud   # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Data center 显示信息
+  environment: Test         # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Environment 显示信息
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+    healthcheck:  # 健康检查
+      enabled: true
+  instance:
+
+#  # 配置 eureka 首页的路径
+#  dashboard:
+#    enabled: true   # 如果这里配置为 false 的话，那么 Eureka 的首页将无法访问
+#    path: /x        # 默认配置是 / ，但是这里配置成 /x 的话，那么访问的首页路径为: http://localhost:8761/x
+#  # 目前我们这个用处就行，先暂时注释这个，不影响后面的测试用
+
+
+
