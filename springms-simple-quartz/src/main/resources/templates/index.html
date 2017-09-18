@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Pages</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p th:text="'Hello ' + ${user} + '!'" />
+    <p th:text="'Version:' + ${version}" />
+    <p th:text="'Release:' + ${release}" />
+    <p th:text="'Environment:' + ${environment}" />
+    <p th:text="'Timestamp:' + ${timestamp}" />
+</body>
+</html>

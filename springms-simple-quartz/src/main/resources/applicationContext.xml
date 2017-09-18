@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+	
+	<bean id="properties"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:application.properties</value>
+			</list>
+		</property>
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+	</bean>
+	
+	<!-- 使用MethodInvokingJobDetailFactoryBean，任务类可以不实现Job接口，通过targetMethod指定调用方法-->
+	<bean id="taskJob" class="com.springms.cloud.task.TestTask"/>
+	<bean id="jobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+    	<property name="group" value="job_work"/>
+    	<property name="name" value="job_work_name"/>
+    	<!--false表示等上一个任务执行完后再开启新的任务-->
+    	<property name="concurrent" value="false"/>
+    	<property name="targetObject">
+        	<ref bean="taskJob"/>
+   	 	</property>
+    	<property name="targetMethod">
+        	<value>run</value>
+    	</property>
+	</bean>
+
+	<!--  调度触发器 -->
+	<bean id="myTrigger"
+      	class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+    	<property name="name" value="work_default_name"/>
+    	<property name="group" value="work_default"/>
+    	<property name="jobDetail">
+        	<ref bean="jobDetail" />
+    	</property>
+    	<property name="cronExpression">
+        	<value>0/10 * * * * ?</value>
+    	</property>
+	</bean>
+
+	<!-- 调度工厂 -->
+	<bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+    	<property name="triggers">
+        	<list>
+            	<ref bean="myTrigger"/>
+        	</list>
+    	</property>
+	</bean>
+	
+	<bean id="springContextUtil" class="com.springms.cloud.util.SpringApplicationContextUtil"/>
+
+</beans>
