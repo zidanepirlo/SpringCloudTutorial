@@ -19,3 +19,5 @@
 /springms-simple-quartz/target
 /springms-simple-quartz-cluster/*.iml
 /springms-simple-quartz-cluster/target
+/springms-consumer-movie-ribbon-properties-without-eureka/*.iml
+/springms-consumer-movie-ribbon-properties-without-eureka/target

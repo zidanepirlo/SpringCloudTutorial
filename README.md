@@ -9,18 +9,19 @@
 
 
 ## 二、各微服务占用端口列表
-| 微服务名称        																| 占用端口	| 功能描述		|
-| :-----------------------------------------------------------------------------|:---------:|:------------	|
-| springms-simple-provider-user      											| 8000 		|简单用户微服务 	|
-| springms-simple-consumer-movie      											| 8005 		|简单电影微服务 	|
-| springms-discovery-eureka      												| 8761 		|服务发现服务端EurekaServer微服务 	|
-| springms-provider-user															| 7900 		|用户服务类，已注册 Eureka 	|
-| springms-consumer-movie      													| 8005 		|电影微服务，已注册 Eureka 	|
-| springms-consumer-movie-ribbon      											| 8010 		|电影微服务，使用 Ribbon 在客户端进行负载均衡  	|
-| springms-consumer-movie-ribbon-custom      									| 8020 		|电影微服务，定制 Ribbon 在客户端进行负载均衡 	|
-| springms-consumer-movie-ribbon-properties     									| 8030 		|电影微服务，配置 Ribbon 在客户端进行负载均衡 	|
-| springms-simple-quartz     									                | 8390 		|简单 Quartz 微服务，不支持分布式 	|
-| springms-simple-quartz-cluster     								            | 8395 		|简单 Quartz-Cluster 微服务支持集群分布式，并支持动态修改 cronExpression 	|
+|章		| 微服务名称        														| 端口		| 功能描述		|
+|:-----:	| :---------------------------------------------------------------------|:---------:|:------------	|
+|001	| springms-simple-provider-user      									| 8000 		|简单用户微服务 	|
+|002	| springms-simple-consumer-movie      									| 8005 		|简单电影微服务 	|
+|003	| springms-discovery-eureka      										| 8761 		|服务发现服务端EurekaServer微服务 	|
+|004	| springms-provider-user													| 7900 		|用户服务类，已注册 Eureka 	|
+|005	| springms-consumer-movie      											| 8005 		|电影微服务，已注册 Eureka 	|
+|006	| springms-consumer-movie-ribbon      									| 8010 		|电影微服务，使用 Ribbon 在客户端进行负载均衡  	|
+|007	| springms-consumer-movie-ribbon-custom      							| 8020 		|电影微服务，定制 Ribbon 在客户端进行负载均衡 	|
+|008	| springms-consumer-movie-ribbon-properties     							| 8030 		|电影微服务，配置 Ribbon 在客户端进行负载均衡 	|
+|009	| springms-simple-quartz     									 		| 8390 		|简单 Quartz 微服务，不支持分布式 	|
+|010	| springms-simple-quartz-cluster     									| 8395 		|简单 Quartz-Cluster 微服务支持集群分布式, 并支持动态修改 cronExpression 时间 	|
+|011	| springms-consumer-movie-ribbon-properties-without-eureka     			| 8040 		|电影Ribbon微服务，脱离Eureka使用 	|
 
 
 

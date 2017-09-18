@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: springms-consumer-movie-ribbon-properties-without-eureka
+server:
+  port: 8040
+#做负载均衡的时候，不需要这个动态配置的地址
+#user:
+#  userServicePath: http://localhost:7900/simple/
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+
+
+ribbon:
+  eureka:
+    enabled: false # 禁用 eureka
+springms-provider-user:
+  ribbon:
+    # 测试一
+    listOfServers: localhost:7899
+
+
+#    # 测试二
+#    listOfServers: localhost:7898,localhost:7899,localhost:7900
