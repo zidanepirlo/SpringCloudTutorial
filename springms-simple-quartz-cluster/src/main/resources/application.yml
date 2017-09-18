@@ -1,0 +1,76 @@
+server:
+  port: 8395
+spring:
+  application:
+    name: springms-simple-quartz-cluster  #全部小写
+
+
+#####################################################################################################
+# mysql 属性配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://ip:port/hmilyylimh?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    username: username
+    password: password
+  jpa:
+    hibernate:
+      #ddl-auto: create #ddl-auto:设为create表示每次都重新建表
+      ddl-auto: update #ddl-auto:设为update表示每次都不会重新建表
+    show-sql: true
+#####################################################################################################
+
+
+
+
+
+
+
+#####################################################################################################
+#########mysql######### 注释先不用这些属性
+#spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
+#spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+#spring.datasource.url=jdbc:mysql://127.0.0.1:3306/test_job?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+#spring.datasource.username=test
+#spring.datasource.password=test
+#
+#
+#spring.datasource.initialSize=5
+#spring.datasource.minIdle=5
+#spring.datasource.maxActive=20
+#spring.datasource.maxWait=60000
+#
+#
+#spring.datasource.timeBetweenEvictionRunsMillis=3600000
+#spring.datasource.minEvictableIdleTimeMillis=18000000
+#
+#
+#spring.datasource.validationQuery=SELECT 1 FROM DUAL
+#spring.datasource.testWhileIdle=true
+#spring.datasource.testOnBorrow=true
+#spring.datasource.testOnReturn=true
+#spring.datasource.poolPreparedStatements=true
+#spring.datasource.maxPoolPreparedStatementPerConnectionSize=20
+#spring.datasource.filters=stat,wall,log4j
+#spring.datasource.connectionProperties=druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+#####################################################################################################
+
+
+
+
+#####################################################################################################
+# 打印日志
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.springms: DEBUG
+#####################################################################################################
+
+
+
+
+
+
+

@@ -62,7 +62,7 @@ public class SimpleQuartzApplication {
  一、简单Quartz微服务：
 
  1、添加 Quartz 相关配置文件；
- 2、启动 microservice-simple-quartz 模块服务，启动1个端口；
+ 2、启动 springms-simple-quartz 模块服务，启动1个端口；
  3、然后查看日志， TestTask 类的日志不断被定时打印出来；
 
  总结：其实若只是简单的实现任务调用而言的话，SpringBoot 的 Schedule 这个注解即可满足需求，但是注意该注解不支持分布式；

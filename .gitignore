@@ -17,3 +17,5 @@
 /springms-consumer-movie-ribbon-properties/target
 /springms-simple-quartz/*.iml
 /springms-simple-quartz/target
+/springms-simple-quartz-cluster/*.iml
+/springms-simple-quartz-cluster/target

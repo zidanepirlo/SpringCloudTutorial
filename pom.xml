@@ -19,6 +19,7 @@
 		<module>springms-consumer-movie-ribbon-custom</module>
 		<module>springms-consumer-movie-ribbon-properties</module>
 		<module>springms-simple-quartz</module>
+		<module>springms-simple-quartz-cluster</module>
     </modules>
 
     <!-- 该套代码测试版本，首选 1.4.1.RELEASE 版本 -->

@@ -20,6 +20,7 @@
 | springms-consumer-movie-ribbon-custom      									| 8020 		|电影微服务，定制 Ribbon 在客户端进行负载均衡 	|
 | springms-consumer-movie-ribbon-properties     									| 8030 		|电影微服务，配置 Ribbon 在客户端进行负载均衡 	|
 | springms-simple-quartz     									                | 8390 		|简单 Quartz 微服务，不支持分布式 	|
+| springms-simple-quartz-cluster     								            | 8395 		|简单 Quartz-Cluster 微服务支持集群分布式，并支持动态修改 cronExpression 	|
 
 
 
