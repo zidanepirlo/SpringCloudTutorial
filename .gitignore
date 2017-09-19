@@ -21,3 +21,5 @@
 /springms-simple-quartz-cluster/target
 /springms-consumer-movie-ribbon-properties-without-eureka/*.iml
 /springms-consumer-movie-ribbon-properties-without-eureka/target
+/springms-consumer-movie-feign/*.iml
+/springms-consumer-movie-feign/target

@@ -21,6 +21,7 @@
 		<module>springms-simple-quartz</module>
 		<module>springms-simple-quartz-cluster</module>
 		<module>springms-consumer-movie-ribbon-properties-without-eureka</module>
+		<module>springms-consumer-movie-feign</module>
     </modules>
 
     <!-- 该套代码测试版本，首选 1.4.1.RELEASE 版本 -->
