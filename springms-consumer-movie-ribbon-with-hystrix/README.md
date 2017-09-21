@@ -1,4 +1,4 @@
-# SpringCloud（第 013 篇）电影 Ribbon 微服务集成 Hystrix 断路器实现失败快速响应，达到熔断效果
+# SpringCloud（第 014 篇）电影 Ribbon 微服务集成 Hystrix 断路器实现失败快速响应，达到熔断效果
 -
 
 ## 一、大致介绍
