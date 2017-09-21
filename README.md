@@ -24,6 +24,7 @@
 |011	| springms-consumer-movie-ribbon-properties-without-eureka     			| 8040 	|电影Ribbon微服务，脱离Eureka使用 	|
 |012	| springms-consumer-movie-feign     			                        	| 7910 	|电影 Feign 微服务，支持客户端负载均衡 	|
 |013	| springms-consumer-movie-feign-custom     			                	| 8050 	|电影微服务，定制Feign可负载均衡并认证Eureka 	|
+|014	| springms-consumer-movie-ribbon-with-hystrix		                	| 8070 	|电影Ribbon微服务，集成 Hytrix 断路器功能 	|
 
 
 
