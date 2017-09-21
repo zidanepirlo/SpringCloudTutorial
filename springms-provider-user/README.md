@@ -98,7 +98,7 @@ eureka:
     # 元数据测试
     metadata-map:
       zone: ABC                 # eureka 可以理解的元数据
-      hehui: HMILYYLIMH         # 不会影响客户端行为
+      hmily: HMILYYLIMH         # 不会影响客户端行为
 #    appname: appname-springms-provider-user    # 直接显示的是App应用的名称，在 http://localhost:8761/ 地址处可以看到该注册服务的应用名称
 
 #    # 这里我们就先注释掉，知道这个 hostname 的用法就可以了，先注释掉不影响后面的测试
