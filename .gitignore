@@ -37,3 +37,5 @@
 /springms-gateway-zuul/target
 /springms-gateway-zuul-attribute/*.iml
 /springms-gateway-zuul-attribute/target
+/springms-provider-user-version/*.iml
+/springms-provider-user-version/target

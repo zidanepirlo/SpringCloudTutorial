@@ -1,0 +1,37 @@
+server:
+  port: 7900
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+  application:
+    name: springms-provider-user-version  #全部小写
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.bibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.springms: DEBUG
+eureka:
+  client:
+    service-url:
+      # defaultZone: http://localhost:8761/eureka/ #不需要认证
+      defaultZone: http://admin:admin@localhost:8761/eureka #需要认证
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    # 元数据测试
+    metadata-map:
+      zone: ABC                 # eureka 可以理解的元数据
+      hmily: HMILYYLIMH         # 不会影响客户端行为
+#    appname: appname-springms-provider-user    # 直接显示的是App应用的名称，在 http://localhost:8761/ 地址处可以看到该注册服务的应用名称
+
+#    # 这里我们就先注释掉，知道这个 hostname 的用法就可以了，先注释掉不影响后面的测试
+#    hostname: user              # 然后我们就可以通过 http://user:7900/simple/1 来访问我们的地址了
