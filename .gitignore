@@ -35,3 +35,5 @@
 /springms-consumer-movie-feign-with-hystrix-factory/target
 /springms-gateway-zuul/*.iml
 /springms-gateway-zuul/target
+/springms-gateway-zuul-attribute/*.iml
+/springms-gateway-zuul-attribute/target

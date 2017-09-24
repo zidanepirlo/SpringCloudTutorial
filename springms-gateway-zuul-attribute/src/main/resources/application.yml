@@ -1,0 +1,103 @@
+﻿spring:
+  application:
+    name: springms-gateway-zuul-attribute
+server:
+  port: 8155
+eureka:
+  datacenter: SpringCloud   # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Data center 显示信息
+  environment: Test         # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Environment 显示信息
+  client:
+    service-url:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+    healthcheck:  # 健康检查
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+
+
+#####################################################################################################
+# 测试一，自定义路径配置，给 springms-provider-user 微服务添加 path、serviceId 属性前缀地址，反向代理用户微服务
+zuul:
+  routes:
+    hmily:
+      path: /custom-path/**
+      serviceId: springms-provider-user # 注意这个名称是注册在eureka服务中的名称
+
+
+
+
+# 测试二，自定义路径配置，给 springms-provider-user 微服务添加 path、serviceId 属性前缀地址，反向代理用户微服务
+#zuul:
+#  routes:
+#    hmily:
+#      path: /custom-path/**
+#      serviceId: http://localhost:7900/ # 注意这个名称是 url 地址
+
+
+
+
+# 测试三：自定义路径配置，给微服务添加 prefix 属性前缀地址，反向代理所有微服务
+#zuul:
+#  prefix: /api
+
+
+
+
+# 测试四：自定义路径配置，给微服务添加 strip-prefix 属性前缀地址，反向代理所有微服务
+#zuul:
+#  prefix: /api
+#  strip-prefix: false
+
+
+
+
+# 测试五：自定义路径配置，针对测试四，再次修改 prefix 属性前缀地址，反向代理用户微服务
+#zuul:
+#  prefix: /simple
+#  strip-prefix: false
+#####################################################################################################
+
+
+
+#####################################################################################################
+# 打印日志
+logging:
+  level:
+    root: INFO
+    com.springms: DEBUG
+    com.netflix: DEBUG
+#####################################################################################################
+
+
+
+
+#####################################################################################################
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+#####################################################################################################
+
+
+
+
+#####################################################################################################
+# 解决第一次请求报超时异常的方案，因为 hystrix 的默认超时时间是 1 秒，因此请求超过该时间后，就会出现页面超时显示 ：
+#
+# 这里就介绍大概三种方式来解决超时的问题，解决方案如下：
+#
+# 第一种方式：将 hystrix 的超时时间设置成 5000 毫秒
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
+#
+# 或者：
+# 第二种方式：将 hystrix 的超时时间直接禁用掉，这样就没有超时的一说了，因为永远也不会超时了
+# hystrix.command.default.execution.timeout.enabled: false
+#
+# 或者：
+# 第三种方式：索性禁用feign的hystrix支持
+# feign.hystrix.enabled: false ## 索性禁用feign的hystrix支持
+
+# 超时的issue：https://github.com/spring-cloud/spring-cloud-netflix/issues/768
+# 超时的解决方案： http://stackoverflow.com/questions/27375557/hystrix-command-fails-with-timed-out-and-no-fallback-available
+# hystrix配置： https://github.com/Netflix/Hystrix/wiki/Configuration#execution.isolation.thread.timeoutInMilliseconds
+#####################################################################################################
