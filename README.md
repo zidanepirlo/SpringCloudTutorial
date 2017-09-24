@@ -28,6 +28,7 @@
 |015	| springms-consumer-movie-ribbon-with-hystrix-propagation				| 8100 	|电影Ribbon微服务，集成 Hytrix 测试隔离策略 	|
 |016	| springms-consumer-movie-feign-custom-without-hystrix					| 8110 	|电影微服务，定制Feign，禁用 Feign 使用 Hystrix	|
 |017	| springms-consumer-movie-feign-with-hystrix-factory						| 8115 	|电影Feign微服务，用fallbackFactory触发熔断降级	|
+|018	| springms-gateway-zuul													| 8150 	|Zuul 服务 API 网关微服务之代理与反向代理	|
 
 
 

@@ -27,13 +27,14 @@
 		<module>springms-consumer-movie-ribbon-with-hystrix-propagation</module>
 		<module>springms-consumer-movie-feign-custom-without-hystrix</module>
 		<module>springms-consumer-movie-feign-with-hystrix-factory</module>
+		<module>springms-gateway-zuul</module>
     </modules>
 
     <!-- 该套代码测试版本，首选 1.4.1.RELEASE 版本 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.2.RELEASE</version>
+        <version>1.4.1.RELEASE</version>
     </parent>
 
     <properties>
