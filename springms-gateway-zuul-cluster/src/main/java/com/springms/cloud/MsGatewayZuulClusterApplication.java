@@ -39,7 +39,7 @@ public class MsGatewayZuulClusterApplication {
      zuul:
          routes:
              hmily:
-                 path: /user-serviceId/**
+                 path: /custom-path/**
                  serviceId: springms-provider-user
 
      # 注意，这里在运行的时候有个坑，如果以树形展开写法的话，那么就会出错了，所以这个配置还是避免用树形写法
@@ -58,13 +58,13 @@ public class MsGatewayZuulClusterApplication {
 
  6、新起网页页签，然后输入 http://localhost:8165/springms-provider-user/simple/6，正常情况下是能看到 ID != 0 一堆用户信息被打印出来；
 
- 总结二：第6步也能正常打印用户信息，说明 API 网关已经生效了，可以通过API服务器地址链接各个微服务的 http://localhost:8150/serviceId/path 这样的路径来访问了；
+ 总结二：第6步也能正常打印用户信息，说明 API 网关已经生效了，可以通过API服务器地址链接各个微服务的 http://localhost:8165/serviceId/path 这样的路径来访问了；
 
- 7、新起网页页签，然后输入 http://localhost:8165/user-serviceId/simple/1，正常情况下是能看到 ID != 0 一堆用户信息被打印出来；
+ 7、新起网页页签，然后输入 http://localhost:8165/custom-path/simple/1，正常情况下是能看到 ID != 0 一堆用户信息被打印出来；
 
  总结三：path、serviceId 设置的反向代理路径也通了；
 
- 8、清除 springms-provider-user 模块控制台的所有的日志，然后刷新 9 次该地址 http://localhost:8165/user-serviceId/simple/1 的网页，然后会发现 3 个用户服务都各打印了3次，再多刷新几次，会发现该负载均衡的调度的算法是轮论调，依次轮询调用每个用户服务微服务；
+ 8、清除 springms-provider-user 模块控制台的所有的日志，然后刷新 9 次该地址 http://localhost:8165/custom-path/simple/1 的网页，然后会发现 3 个用户服务都各打印了3次，再多刷新几次，会发现该负载均衡的调度的算法是轮论调，依次轮询调用每个用户服务微服务；
 
  总结四：listOfServers 属性也生效了，从而说明添加 listOfServers 也可以达到 zuul 负载均衡的能力；
  ****************************************************************************************/
