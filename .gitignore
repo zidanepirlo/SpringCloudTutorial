@@ -31,3 +31,5 @@
 /springms-consumer-movie-ribbon-with-hystrix-propagation/target
 /springms-consumer-movie-feign-custom-without-hystrix/*.iml
 /springms-consumer-movie-feign-custom-without-hystrix/target
+/springms-consumer-movie-feign-with-hystrix-factory/*.iml
+/springms-consumer-movie-feign-with-hystrix-factory/target
