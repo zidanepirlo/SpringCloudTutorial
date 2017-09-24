@@ -26,6 +26,7 @@
 |013	| springms-consumer-movie-feign-custom     			                	| 8050 	|电影微服务，定制Feign可负载均衡并认证Eureka 	|
 |014	| springms-consumer-movie-ribbon-with-hystrix		                	| 8070 	|电影Ribbon微服务，集成 Hytrix 断路器功能 	|
 |015	| springms-consumer-movie-ribbon-with-hystrix-propagation				| 8100 	|电影Ribbon微服务，集成 Hytrix 测试隔离策略 	|
+|016	| springms-consumer-movie-feign-custom-without-hystrix					| 8110 	|电影微服务，定制Feign，禁用 Feign 使用 Hystrix	|
 
 
 

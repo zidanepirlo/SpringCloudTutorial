@@ -1,0 +1,64 @@
+﻿
+
+
+/****************************************************************************************
+ 一、电影微服务，定制Feign，一个Feign功能禁用Hystrix，另一个Feign功能启用Hystrix（正常功能测试）：
+
+ 1、编写：UserFeignCustomClientFallback、UserFeignCustomSecondClientFallback 断路器回退客户端类；
+ 2、编写 TestEurekaAuthConfiguration 配置，加入禁用 Hystrix 模块功能的代码，表示禁用该配置的客户端模块；
+ 3、启动 springms-discovery-eureka 模块服务，启动1个端口；
+ 4、启动 springms-provider-user 模块服务，启动1个端口；
+ 5、启动 springms-consumer-movie-feign-custom-without-hystrix 模块服务；
+ 6、在浏览器输入地址 http://localhost:8110/movie/1 可以看到信息成功的被打印出来，表明正常情况下一切正常；
+ 7、在浏览器输入地址 http://localhost:8110/springms-provider-user 可以看到信息成功的被打印出来，表明正常情况下一切正常；
+
+ 注意：如果第6步如果一开始就输入ID = 0 的用户信息，不要灰心，耐心等等，说不定服务之间还没通信链接成功呢。。。
+      如果第6步的地址输入错误，请回头看看 springms-provider-user 该微服务 appname 的名字，再次输入http://localhost:8110/ + appname 即可试试；
+
+ ****************************************************************************************/
+
+
+
+
+/****************************************************************************************
+ 二、电影微服务，定制Feign，一个Feign功能禁用Hystrix，另一个Feign功能启用Hystrix（禁用其中一个 Feign 的断路器功能）：
+
+ 1、编写：UserFeignCustomClientFallback、UserFeignCustomSecondClientFallback 断路器回退客户端类；
+ 2、编写 TestEurekaAuthConfiguration 配置，加入禁用 Hystrix 模块功能的代码，表示禁用该配置的客户端模块；
+ 3、启动 springms-discovery-eureka 模块服务，启动1个端口；
+ 4、启动 springms-provider-user 模块服务，启动1个端口；
+ 5、启动 springms-consumer-movie-feign-custom-without-hystrix 模块服务；
+ 6、在浏览器输入地址 http://localhost:8110/movie/1 可以看到信息成功的被打印出来，表明正常情况下一切正常；
+ 7、在浏览器输入地址 http://localhost:8110/springms-provider-user 可以看到信息成功的被打印出来，表明正常情况下一切正常；
+
+ 8、关闭 springms-provider-user 模块服务；
+ 9、在浏览器输入地址 http://localhost:8110/movie/1 可以看到用户ID = 0 的用户信息被打印出来，表明该模块的Hystrix断路器模块起作用了；
+
+ 10、再关闭 springms-discovery-eureka 模块服务；
+ 11、再在浏览器输入地址 http://localhost:8110/appname-springms-provider-user 可以看到网页已经打印出链接不上服务的错误页面了，表明该模块禁用Hystrix断路器模块也起作用了；
+ ****************************************************************************************/
+
+
+
+
+
+
+
+# 解决第一次请求报超时异常的方案，因为 hystrix 的默认超时时间是 1 秒，因此请求超过该时间后，就会出现页面超时显示 ：
+#
+# 这里就介绍大概三种方式来解决超时的问题，解决方案如下：
+#
+# 第一种方式：将 hystrix 的超时时间设置成 5000 毫秒
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
+#
+# 或者：
+# 第二种方式：将 hystrix 的超时时间直接禁用掉，这样就没有超时的一说了，因为永远也不会超时了
+# hystrix.command.default.execution.timeout.enabled: false
+#
+# 或者：
+# 第三种方式：索性禁用feign的hystrix支持
+# feign.hystrix.enabled: false ## 索性禁用feign的hystrix支持
+
+# 超时的issue：https://github.com/spring-cloud/spring-cloud-netflix/issues/768
+# 超时的解决方案： http://stackoverflow.com/questions/27375557/hystrix-command-fails-with-timed-out-and-no-fallback-available
+# hystrix配置： https://github.com/Netflix/Hystrix/wiki/Configuration#execution.isolation.thread.timeoutInMilliseconds
