@@ -1,0 +1,26 @@
+server:
+  port: 8190
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: springms-file-upload
+  http:
+    multipart:
+      max-file-size: 20Mb      # Max file size，默认1M
+      max-request-size: 20Mb   # Max request size，默认10M
+
+
+
+#####################################################################################################
+# 打印日志
+logging:
+  level:
+    root: INFO
+    com.springms: DEBUG
+    com.netflix: debug
+#####################################################################################################

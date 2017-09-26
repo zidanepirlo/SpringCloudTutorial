@@ -45,3 +45,5 @@
 /springms-gateway-zuul-filter/target
 /springms-gateway-zuul-reg-exp/*.iml
 /springms-gateway-zuul-reg-exp/target
+/springms-file-upload/*.iml
+/springms-file-upload/target
