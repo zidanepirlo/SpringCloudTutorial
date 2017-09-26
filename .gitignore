@@ -43,3 +43,5 @@
 /springms-gateway-zuul-cluster/target
 /springms-gateway-zuul-filter/*.iml
 /springms-gateway-zuul-filter/target
+/springms-gateway-zuul-reg-exp/*.iml
+/springms-gateway-zuul-reg-exp/target

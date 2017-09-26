@@ -32,6 +32,7 @@
 		<module>springms-provider-user-version</module>
 		<module>springms-gateway-zuul-cluster</module>
 		<module>springms-gateway-zuul-filter</module>
+		<module>springms-gateway-zuul-reg-exp</module>
     </modules>
 
     <!-- 该套代码测试版本，首选 1.4.1.RELEASE 版本 -->

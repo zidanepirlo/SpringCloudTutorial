@@ -32,6 +32,7 @@
 |019	| springms-gateway-zuul-attribute										| 8155 	|Zuul 网关微服务的一些属性应用测试	|
 |020	| springms-gateway-zuul-cluster											| 8165 	|Zuul添加listOfServers属性实现客户端负载均衡	|
 |021	| springms-gateway-zuul-filter											| 8215 	|Zuul 的过滤器 ZuulFilter 的使用	|
+|022	| springms-gateway-zuul-reg-exp											| 8185 	|Zuul 网关微服务的 regexmapper 属性测试	|
 
 
 
