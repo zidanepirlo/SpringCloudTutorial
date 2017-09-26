@@ -47,3 +47,5 @@
 /springms-gateway-zuul-reg-exp/target
 /springms-file-upload/*.iml
 /springms-file-upload/target
+/springms-gateway-zuul-file-upload/*.iml
+/springms-gateway-zuul-file-upload/target

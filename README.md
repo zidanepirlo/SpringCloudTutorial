@@ -34,6 +34,7 @@
 |021	| springms-gateway-zuul-filter											| 8215 	|Zuul 的过滤器 ZuulFilter 的使用	|
 |022	| springms-gateway-zuul-reg-exp											| 8185 	|Zuul 网关微服务的 regexmapper 属性测试	|
 |023	| springms-file-upload													| 8190 	|简单文件上传微服务	|
+|024	| springms-gateway-zuul-file-upload										| 8195 	|简单文件上传微服务加入zuul微服务上传文件	|
 
 
 
