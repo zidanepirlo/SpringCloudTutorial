@@ -49,3 +49,5 @@
 /springms-file-upload/target
 /springms-gateway-zuul-file-upload/*.iml
 /springms-gateway-zuul-file-upload/target
+/springms-gateway-zuul-fallback/*.iml
+/springms-gateway-zuul-fallback/target

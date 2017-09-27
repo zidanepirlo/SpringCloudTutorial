@@ -35,6 +35,7 @@
 |022	| springms-gateway-zuul-reg-exp											| 8185 	|Zuul 网关微服务的 regexmapper 属性测试	|
 |023	| springms-file-upload													| 8190 	|简单文件上传微服务	|
 |024	| springms-gateway-zuul-file-upload										| 8195 	|简单文件上传微服务加入zuul微服务上传文件	|
+|025	| springms-gateway-zuul-fallback											| 8200 	|Zuul 提供了一种回退机制来应对熔断处理	|
 
 
 
