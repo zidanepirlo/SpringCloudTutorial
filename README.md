@@ -9,7 +9,7 @@
 
 
 ## 二、各微服务占用端口列表
-|章		| 微服务名称        														| 端口	| 功能描述		|
+|章		| 微服务模块名称     														| 端口	| 功能描述		|
 |:-----:	| :---------------------------------------------------------------------|:-----:|:------------	|
 |001	| springms-simple-provider-user      									| 8000 	|简单用户微服务 	|
 |002	| springms-simple-consumer-movie      									| 8005 	|简单电影微服务 	|
@@ -36,6 +36,7 @@
 |023	| springms-file-upload													| 8190 	|简单文件上传微服务	|
 |024	| springms-gateway-zuul-file-upload										| 8195 	|简单文件上传微服务加入zuul微服务上传文件	|
 |025	| springms-gateway-zuul-fallback											| 8200 	|Zuul 提供了一种回退机制来应对熔断处理	|
+|026	| springms-node-service													| 8205 	|简单异构系统之 nodejs 微服务	|
 
 
 
