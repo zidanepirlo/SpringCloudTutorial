@@ -1,0 +1,38 @@
+﻿spring:
+  application:
+    name: springms-sidecar
+server:
+  port: 8210
+eureka:
+  datacenter: SpringCloud   # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Data center 显示信息
+  environment: Test         # 修改 http://localhost:8761 地址 Eureka 首页上面 System Status 的 Environment 显示信息
+  client:
+    service-url:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+    healthcheck:  # 健康检查
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+
+
+
+#####################################################################################################
+# 打印日志
+logging:
+  level:
+    root: INFO
+    com.springms: DEBUG
+#####################################################################################################
+
+
+
+
+
+#####################################################################################################
+# 异构微服务的配置， port 代表异构微服务的端口；health-uri 代表异构微服务的操作链接地址
+sidecar:
+  port: 8205
+  health-uri: http://localhost:8205/health.json
+#####################################################################################################
+

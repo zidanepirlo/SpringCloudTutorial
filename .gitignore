@@ -51,3 +51,5 @@
 /springms-gateway-zuul-file-upload/target
 /springms-gateway-zuul-fallback/*.iml
 /springms-gateway-zuul-fallback/target
+/springms-sidecar/*.iml
+/springms-sidecar/target

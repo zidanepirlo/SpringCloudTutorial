@@ -36,6 +36,7 @@
 		<module>springms-file-upload</module>
 		<module>springms-gateway-zuul-file-upload</module>
 		<module>springms-gateway-zuul-fallback</module>
+		<module>springms-sidecar</module>
     </modules>
 
     <!-- 该套代码测试版本，首选 1.4.1.RELEASE 版本 -->
