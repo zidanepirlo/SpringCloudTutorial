@@ -53,3 +53,5 @@
 /springms-gateway-zuul-fallback/target
 /springms-sidecar/*.iml
 /springms-sidecar/target
+/springms-config-server/*.iml
+/springms-config-server/target

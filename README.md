@@ -37,7 +37,8 @@
 |024	| springms-gateway-zuul-file-upload										| 8195 	|简单文件上传微服务加入zuul微服务上传文件	|
 |025	| springms-gateway-zuul-fallback											| 8200 	|Zuul 提供了一种回退机制来应对熔断处理	|
 |026	| springms-node-service													| 8205 	|简单异构系统之 nodejs 微服务	|
-|027	| springms-sidecar														| 8210 	|成异构微服务系统到 SpringCloud 生态圈中	|
+|027	| springms-sidecar														| 8210 	|集成异构微服务系统到 SpringCloud 生态圈中	|
+|028	| springms-config-server													| 8220 	|ConfigServer 配置微服务	|
 
 
 

@@ -1,0 +1,13 @@
+server:
+  port: 8220
+
+spring:
+  application:
+    name: springms-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://git.oschina.net/ylimhhmily/OpenSource_CustomCircleLineProgressBar
+
+
