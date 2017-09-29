@@ -8,11 +8,11 @@ var server = http.createServer(function(req, res) {
   // 获得请求的路径
   var pathname = url.parse(req.url).pathname;  
   res.writeHead(200, { 'Content-Type' : 'application/json; charset=utf-8' });
-  // 访问http://localhost:8060/，将会返回{"index":"欢迎来到简单异构系统之 nodejs 服务首页"}
+  // 访问http://localhost:8205/，将会返回{"index":"欢迎来到简单异构系统之 nodejs 服务首页"}
   if (pathname === '/') {
     res.end(JSON.stringify({ "index" : "欢迎来到简单异构系统之 nodejs 服务首页" }));
   }
-  // 访问http://localhost:8060/health，将会返回{"status":"UP"}
+  // 访问http://localhost:8205/health，将会返回{"status":"UP"}
   else if (pathname === '/health.json') {
     res.end(JSON.stringify({ "status" : "UP" }));
   }
