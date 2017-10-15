@@ -39,6 +39,7 @@
 |026	| springms-node-service													| 8205 	|简单异构系统之 nodejs 微服务	|
 |027	| springms-sidecar														| 8210 	|集成异构微服务系统到 SpringCloud 生态圈中	|
 |028	| springms-config-server													| 8220 	|ConfigServer 配置微服务	|
+|029	| springms-config-client													| 8225 	|配置客户端ConfigClient接入配置服务端	|
 
 
 
