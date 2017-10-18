@@ -1,0 +1,20 @@
+#配置登录密码
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+server:
+  port: 8275
+
+spring:
+  application:
+    name: springms-config-server-authc
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://git.oschina.net/ylimhhmily/OpenSource_CustomCircleLineProgressBar
+
+
