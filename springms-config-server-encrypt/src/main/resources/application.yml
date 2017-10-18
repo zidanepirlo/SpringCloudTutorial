@@ -1,0 +1,18 @@
+﻿server:
+  port: 8255
+
+spring:
+  application:
+    name: springms-config-server-encrypt
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://git.oschina.net/ylimhhmily/OpenSource_CustomCircleLineProgressBar
+#          username:    # 自己设置，这里就不做演示了
+#          password:    # 自己设置，这里就不做演示了
+
+
+
+encrypt:
+  key: hehui  # 给配置文件的内容进行加密用的
