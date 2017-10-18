@@ -43,6 +43,8 @@
 		<module>springms-config-client-encrypt</module>
 		<module>springms-config-server-encrypt-rsa</module>
 		<module>springms-config-client-encrypt-rsa</module>
+        <module>springms-config-server-authc</module>
+        <module>springms-config-client-authc</module>
     </modules>
 
     <!-- 该套代码测试版本，首选 1.4.1.RELEASE 版本 -->

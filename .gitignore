@@ -65,3 +65,7 @@
 /springms-config-server-encrypt-rsa/target
 /springms-config-client-encrypt-rsa/*.iml
 /springms-config-client-encrypt-rsa/target
+/springms-config-server-authc/*.iml
+/springms-config-server-authc/target
+/springms-config-client-authc/*.iml
+/springms-config-client-authc/target

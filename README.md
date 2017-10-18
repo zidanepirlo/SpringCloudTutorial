@@ -44,6 +44,8 @@
 |031	| [springms-config-client-encrypt](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-client-encrypt)| 8260 	|ConfigClient链接经过对称加解密的服务	|
 |032	| [springms-config-server-encrypt-rsa](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-server-encrypt-rsa)| 8265 	|ClientServer对内容进行RSA加解密	|
 |033	| [springms-config-client-encrypt-rsa](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-client-encrypt-rsa)| 8270 	|ConfigClient链接经过RSA加解密的服务	|
+|034	| [springms-config-server-authc](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-server-authc)| 8275 	|ClientServer对设置安全认证机制	|
+|035	| [springms-config-client-authc](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-client-authc)| 8280 	|ConfigClient链接经过安全认证的服务	|
 
 
 
