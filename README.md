@@ -40,6 +40,8 @@
 |027	| [springms-sidecar](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-sidecar)| 8210 	|集成异构微服务系统到 SpringCloud 生态圈中	|
 |028	| [springms-config-server](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-server)	| 8220 	|ConfigServer 配置微服务	|
 |029	| [springms-config-client](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-client)| 8225 	|配置客户端ConfigClient接入配置服务端	|
+|030	| [springms-config-server-encrypt](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-server-encrypt)| 8255 	|ClientServer对内容进行对称加解密	|
+|031	| [springms-config-client-encrypt](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-client-encrypt)| 8260 	|ConfigClient链接经过对称加解密的服务	|
 
 
 

@@ -1,0 +1,28 @@
+
+#####################################################################################################
+# 配置服务客户端Client应用入口（链接 ClientServer 测试）
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8255  # 链接 springms-config-server-encrypt 微服务
+      profile: prd  # 选择生产配置文件
+      label: master #当 ConfigServer 的后端存储的是 Git 的时候，默认就是 master
+
+  application:
+    name: foobar  #取 foobar-dev.yml 这个文件的 application 名字，即为 foobar 名称
+#####################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
