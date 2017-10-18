@@ -1,4 +1,4 @@
-# SpringCloud（第 030 篇）配置客户端 ConfigClient 接入配置服务端
+# SpringCloud（第 030 篇）配置服务端ClientServer对配置文件内容进行对称加解密
 -
 
 ## 一、大致介绍
