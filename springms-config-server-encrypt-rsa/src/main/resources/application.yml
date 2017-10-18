@@ -1,0 +1,21 @@
+﻿server:
+  port: 8265
+
+spring:
+  application:
+    name: springms-config-server-encrypt-rsa
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://git.oschina.net/ylimhhmily/OpenSource_CustomCircleLineProgressBar
+#          username:    # 自己设置，这里就不做演示了
+#          password:    # 自己设置，这里就不做演示了
+
+
+encrypt:
+  keyStore:
+    location: classpath:/server-rsa.jks
+    password: paic1234
+    alias: mytestkey
+    secret: aaaaa888  # 私钥密码
