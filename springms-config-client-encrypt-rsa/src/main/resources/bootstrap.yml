@@ -1,0 +1,45 @@
+﻿
+#####################################################################################################
+## 配置服务客户端Client应用入口（链接 ClientServer 测试）
+#spring:
+#  cloud:
+#    config:
+#      uri: http://localhost:8265  # 链接 springms-config-client-encrypt-rsa 微服务
+#      profile: stg2rsa  # 选择 stg2rsa 配置文件
+#      label: master #当 ConfigServer 的后端存储的是 Git 的时候，默认就是 master
+#
+#  application:
+#    name: foobar  #取 foobar-stg2rsa.yml 这个文件的 application 名字，即为 foobar 名称
+#####################################################################################################
+
+
+
+
+
+#####################################################################################################
+# 配置服务客户端Client应用入口（链接 ClientServer 测试）
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8265  # 链接 springms-config-client-encrypt-rsa 微服务
+      profile: stg1rsa  # 选择 stg1rsa 配置文件
+      label: master #当 ConfigServer 的后端存储的是 Git 的时候，默认就是 master
+
+  application:
+    name: foobar  #取 foobar-stg1rsa.yml 这个文件的 application 名字，即为 foobar 名称
+#####################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
