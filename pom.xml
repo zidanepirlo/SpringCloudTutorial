@@ -47,6 +47,7 @@
         <module>springms-config-client-authc</module>
         <module>springms-config-client-refresh</module>
         <module>springms-config-client-refresh-bus</module>
+        <module>springms-simple-provider-user-devtools</module>
     </modules>
 
     <!-- 该套代码测试版本，首选 1.4.1.RELEASE 版本 -->

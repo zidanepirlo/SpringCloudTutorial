@@ -48,6 +48,7 @@
 |035	| [springms-config-client-authc](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-client-authc)| 8280 	|ConfigClient链接经过安全认证的服务	|
 |036	| [springms-config-client-refresh](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-client-refresh)| 8295 	|单点手动动态刷新配置服务客户端配置	|
 |037	| [springms-config-client-refresh-bus](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-client-refresh-bus)| 8300 	|通过bus/refresh半自动刷新ConfigClient配置|
+|038	| [springms-simple-provider-user-devtools](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-simple-provider-user-devtools)| 8305 	|idea环境热部署微服务开发|
 
 
 

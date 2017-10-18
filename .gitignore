@@ -73,3 +73,5 @@
 /springms-config-client-refresh/target
 /springms-config-client-refresh-bus/*.iml
 /springms-config-client-refresh-bus/target
+/springms-simple-provider-user-devtools/*.iml
+/springms-simple-provider-user-devtools/target
