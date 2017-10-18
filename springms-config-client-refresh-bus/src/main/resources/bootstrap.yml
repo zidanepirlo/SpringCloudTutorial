@@ -1,0 +1,32 @@
+
+#####################################################################################################
+# 配置服务客户端Client应用入口（链接 ClientServer 测试）
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8220
+      profile: refreshbus
+      label: master #当 ConfigServer 的后端存储的是 Git 的时候，默认就是 master
+
+    bus:
+      trace:
+        enabled: true   # 设置节点状态跟踪，也可以通过网页 http://localhost:8300/trace 可以看到相关发送事件的数据内容
+
+  application:
+    name: foobar  #取 foobar-refreshbus.yml 这个文件的 application 名字，即为 foobar 名称
+#####################################################################################################
+
+
+
+
+
+#####################################################################################################
+# rabbitmq 配置：
+  rabbitmq:
+    host: localhost   # 登录 Rabbitmq 后台管理页面地址为：http://localhost:15672
+    port: 5672
+    username: guest   # 默认账户
+    password: guest   # 默认密码
+#####################################################################################################
+
+

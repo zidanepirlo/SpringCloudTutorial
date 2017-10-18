@@ -46,6 +46,8 @@
 |033	| [springms-config-client-encrypt-rsa](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-client-encrypt-rsa)| 8270 	|ConfigClient链接经过RSA加解密的服务	|
 |034	| [springms-config-server-authc](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-server-authc)| 8275 	|ClientServer对设置安全认证机制	|
 |035	| [springms-config-client-authc](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-client-authc)| 8280 	|ConfigClient链接经过安全认证的服务	|
+|036	| [springms-config-client-refresh](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-client-refresh)| 8295 	|单点手动动态刷新配置服务客户端配置	|
+|037	| [springms-config-client-refresh-bus](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-client-refresh-bus)| 8300 	|通过bus/refresh半自动刷新ConfigClient配置|
 
 
 

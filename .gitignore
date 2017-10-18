@@ -69,3 +69,7 @@
 /springms-config-server-authc/target
 /springms-config-client-authc/*.iml
 /springms-config-client-authc/target
+/springms-config-client-refresh/*.iml
+/springms-config-client-refresh/target
+/springms-config-client-refresh-bus/*.iml
+/springms-config-client-refresh-bus/target
