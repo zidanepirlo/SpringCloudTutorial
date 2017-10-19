@@ -49,6 +49,10 @@
 |036	| [springms-config-client-refresh](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-client-refresh)| 8295 	|单点手动动态刷新配置服务客户端配置	|
 |037	| [springms-config-client-refresh-bus](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-config-client-refresh-bus)| 8300 	|通过bus/refresh半自动刷新ConfigClient配置|
 |038	| [springms-simple-provider-user-devtools](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-simple-provider-user-devtools)| 8305 	|idea环境热部署微服务开发|
+|039	| [springms-provider-user-mysql-jparepository](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-provider-user-mysql-jparepository)| 8310 	|通过JpaRepository编写数据库访问|
+|040	| [springms-provider-user-mysql-crudrepository](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-provider-user-mysql-crudrepository)| 8320 	|通过CrudRepository编写数据库访问|
+|041	| [springms-provider-user-mysql-jdbctemplate](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-provider-user-mysql-jdbctemplate)| 8315 	|通过JdbcTemplate编写数据库访问|
+|042	| [springms-provider-user-mysql-jdbctemplate-transactional](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-provider-user-mysql-jdbctemplate-transactional)| 8335 	|通过JdbcTemplate编写数据库访问且支持事物|
 
 
 

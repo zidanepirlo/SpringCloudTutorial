@@ -75,3 +75,11 @@
 /springms-config-client-refresh-bus/target
 /springms-simple-provider-user-devtools/*.iml
 /springms-simple-provider-user-devtools/target
+/springms-provider-user-mysql-jparepository/*.iml
+/springms-provider-user-mysql-jparepository/target
+/springms-provider-user-mysql-crudrepository/*.iml
+/springms-provider-user-mysql-crudrepository/target
+/springms-provider-user-mysql-jdbctemplate/*.iml
+/springms-provider-user-mysql-jdbctemplate/target
+/springms-provider-user-mysql-jdbctemplate-transactional/*.iml
+/springms-provider-user-mysql-jdbctemplate-transactional/target
