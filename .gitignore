@@ -91,3 +91,5 @@
 /springms-provider-user-mysql-mybatis-mapper-ehcache/target
 /springms-schedule/*.iml
 /springms-schedule/target
+/springms-async/*.iml
+/springms-async/target

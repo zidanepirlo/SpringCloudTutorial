@@ -56,6 +56,7 @@
         <module>springms-provider-user-mysql-mybatis-mapper</module>
         <module>springms-provider-user-mysql-mybatis-mapper-ehcache</module>
         <module>springms-schedule</module>
+        <module>springms-async</module>
     </modules>
 
     <!-- 该套代码测试版本，首选 1.4.1.RELEASE 版本 -->

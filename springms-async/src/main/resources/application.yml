@@ -1,0 +1,6 @@
+server:
+  port: 8345
+spring:
+  application:
+    name: springms-async  #全部小写
+
