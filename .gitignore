@@ -93,3 +93,5 @@
 /springms-schedule/target
 /springms-async/*.iml
 /springms-async/target
+/springms-aop-weblog/*.iml
+/springms-aop-weblog/target

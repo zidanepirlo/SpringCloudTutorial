@@ -1,0 +1,14 @@
+server:
+  port: 8350
+spring:
+  application:
+    name: springms-aop-weblog  #全部小写
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
