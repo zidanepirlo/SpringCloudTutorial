@@ -1,0 +1,7 @@
+server:
+  port: 8341
+spring:
+  application:
+    name: springms-schedule  #全部小写
+
+
