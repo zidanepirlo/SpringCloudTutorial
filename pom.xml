@@ -52,6 +52,7 @@
         <module>springms-provider-user-mysql-crudrepository</module>
         <module>springms-provider-user-mysql-jdbctemplate</module>
         <module>springms-provider-user-mysql-jdbctemplate-transactional</module>
+        <module>springms-provider-user-mysql-mybatis</module>
     </modules>
 
     <!-- 该套代码测试版本，首选 1.4.1.RELEASE 版本 -->
