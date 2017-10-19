@@ -85,3 +85,5 @@
 /springms-provider-user-mysql-jdbctemplate-transactional/target
 /springms-provider-user-mysql-mybatis/*.iml
 /springms-provider-user-mysql-mybatis/target
+/springms-provider-user-mysql-mybatis-mapper/*.iml
+/springms-provider-user-mysql-mybatis-mapper/target
