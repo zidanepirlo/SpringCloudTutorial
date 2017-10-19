@@ -55,6 +55,7 @@
 |042	| [springms-provider-user-mysql-jdbctemplate-transactional](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-provider-user-mysql-jdbctemplate-transactional)| 8335 	|通过JdbcTemplate编写数据库访问且支持事物|
 |043	| [springms-provider-user-mysql-mybatis](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-provider-user-mysql-mybatis)| 8325 	|简单的集成Mybatis框架访问数据库|
 |044	| [springms-provider-user-mysql-mybatis-mapper](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-provider-user-mysql-mybatis-mapper)| 8330 	|集成Mybatis框架采用MapperXml访问数据库|
+|045	| [springms-provider-user-mysql-mybatis-mapper-ehcache](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-provider-user-mysql-mybatis-mapper-ehcache)| 8385 	|集成Mybatis\ehcache采用MapperXml访问数据库|
 
 
 

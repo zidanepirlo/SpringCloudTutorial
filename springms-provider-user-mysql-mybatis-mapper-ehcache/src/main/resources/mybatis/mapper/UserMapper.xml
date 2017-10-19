@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springms.cloud.mapper.IUserMapper">
+
+
+    <resultMap id="result" type="User">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="age" property="age" jdbcType="TINYINT"/>
+        <result column="balance" property="balance" jdbcType="VARCHAR"/>
+    </resultMap>
+
+
+    <!-- 若不需要自动返回主键，将useGeneratedKeys="true" keyProperty="id"去掉即可(当然如果不需要自动返回主键，直接用注解即可) -->
+    <insert id="insertUser" parameterType="User" useGeneratedKeys="false" keyProperty="id" >
+        <![CDATA[
+           INSERT INTO user
+           (
+               username,
+               name,
+               age,
+               balance
+           )
+           VALUES
+           (
+               #{username, jdbcType=VARCHAR},
+               #{name, jdbcType=VARCHAR},
+               #{age, jdbcType=TINYINT},
+               #{balance, jdbcType=VARCHAR}
+           )
+        ]]>
+    </insert>
+
+    <select id="findUserById" resultMap="result" parameterType="Long">
+        select * from user
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <select id="findAllUsers" resultMap="result">
+        select * from user
+    </select>
+
+    <select id="deleteUser" parameterType="Long">
+        DELETE from user where id = #{id}
+    </select>
+
+    <update id="updateUser" parameterType="User" >
+        update user set userName=#{username},name=#{name},age=#{age},balance=#{balance} where id=#{id}
+    </update>
+</mapper>

@@ -1,0 +1,55 @@
+server:
+  port: 8385
+spring:
+  application:
+    name: springms-provider-user-mysql-mybatis-mapper-ehcache  #全部小写
+
+
+#####################################################################################################
+# mysql 属性配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://120.77.176.162:3306/hmilyylimh
+    username: root
+    password: mysqladmin
+#  jpa:
+#    hibernate:
+#      #ddl-auto: create #ddl-auto:设为create表示每次都重新建表
+#      ddl-auto: update #ddl-auto:设为update表示每次都不会重新建表
+#    show-sql: true
+#####################################################################################################
+
+
+
+
+
+#####################################################################################################
+# mybatis mapper xml 配置
+mybatis:
+  # mybatis.type-aliases-package：指定domain类的基包，即指定其在*Mapper.xml文件中可以使用简名来代替全类名（看后边的UserMapper.xml介绍）
+  type-aliases-package:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+#####################################################################################################
+
+
+
+
+
+#####################################################################################################
+# 打印日志
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.springms: DEBUG
+#####################################################################################################
+
+
+
+
+
+
+

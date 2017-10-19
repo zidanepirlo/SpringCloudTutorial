@@ -54,6 +54,7 @@
         <module>springms-provider-user-mysql-jdbctemplate-transactional</module>
         <module>springms-provider-user-mysql-mybatis</module>
         <module>springms-provider-user-mysql-mybatis-mapper</module>
+        <module>springms-provider-user-mysql-mybatis-mapper-ehcache</module>
     </modules>
 
     <!-- 该套代码测试版本，首选 1.4.1.RELEASE 版本 -->
