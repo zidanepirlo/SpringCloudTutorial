@@ -1,16 +1,15 @@
-# SpringCloud（第 039 篇）链接Mysql数据库,通过JpaRepository编写数据库访问
+# SpringCloud（第 040 篇）链接Mysql数据库,通过CrudRepository编写数据库访问
 -
 
 ## 一、大致介绍
 
 ``` 
-1、本章节开始讲解一下访问数据库的操作，不过其实这还不算是SpringCloud的范畴，应该说是SpringBoot的操作范畴，这些就先抛开了，我们就还是讲解数据库的操作；
-2、JpaRepository操作数据库访问，其实有许多同事都建议最好不要采用，因为我们平常的业务处理中并没有用到Jpa的额外的方法；
-3、而且我也找了一篇文章提到了关于对JpaRepository的一些看法，链接地址为 http://jtuts.com/2014/08/26/difference-between-crudrepository-and-jparepository-in-spring-data-jpa;
-4、而本章节我们仅仅只是讲解了一下如何集成操作Mysql数据库，采用JpaRepository来访问而已，不涉及什么深层次的业务；
+1、前面章节提到了用JpaRepository访问数据库，而本章节则是用CrudRepository访问数据，那么他们之间都可以访问数据库，有啥联系呢？
+2、从源码我可知JpaRepository继承PagingAndSortingRepository，而PagingAndSortingRepository又继承CrudRepository，从这方面讲他们是子类与父类之间的关系；
+3、而CrudRepository仅仅只是提供了最基本的数据库访问操作的方法，而JpaRepository在这些基础上还提供了一些更丰富的操作接口，但是在实际应用中大多数业务场景比较少用，但是还是有用的；
+4、因此两者到底如何抉择的问题就来了，如果要我来选，我本人倾向于用CrudRepository，因为CrudRepository已经提供了基本的增删改查操作，而且这些基本满足我们绝大多数业务场景，我们不需要再增加额外的方法来操作数据库了；
 5、另外配置文件中的mysql数据库配置，那么就得大家自己用自己的了哈；
 ```
-[Mysql数据库安装步骤](https://gitee.com/ylimhhmily/SpringCloudTutorial/blob/master/doc/install/mysql.md)
 
 
 ## 二、实现步骤
@@ -23,7 +22,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-	<artifactId>springms-provider-user-mysql-jparepository</artifactId>
+	<artifactId>springms-provider-user-mysql-crudrepository</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 	
@@ -57,13 +56,13 @@
 ```
 
 
-### 2.2 添加应用配置文件（springms-provider-user-mysql-jparepository\src\main\resources\application.yml）
+### 2.2 添加应用配置文件（springms-provider-user-mysql-crudrepository\src\main\resources\application.yml）
 ``` 
 server:
-  port: 8310
+  port: 8320
 spring:
   application:
-    name: springms-provider-user-mysql-jparepository  #全部小写
+    name: springms-provider-user-mysql-crudrepository  #全部小写
 
 
 #####################################################################################################
@@ -97,27 +96,26 @@ logging:
     com.springms: DEBUG
 #####################################################################################################
 
-
 ```
 
 
 
-### 2.3 添加访问底层数据模型的DAO接口（springms-provider-user-mysql-jparepository/src/main/java/com/springms/cloud/repository/UserRepository.java）
+### 2.3 添加访问底层数据模型的DAO接口（springms-provider-user-mysql-crudrepository/src/main/java/com/springms/cloud/repository/UserRepository.java）
 ``` 
 package com.springms.cloud.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.springms.cloud.entity.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends CrudRepository<User, Long> {
 
 }
 ```
 
-### 2.4 添加实体用户类User（springms-provider-user-mysql-jparepository/src/main/java/com/springms/cloud/entity/User.java）
+### 2.4 添加实体用户类User（springms-provider-user-mysql-crudrepository/src/main/java/com/springms/cloud/entity/User.java）
 ``` 
 package com.springms.cloud.entity;
 
@@ -188,7 +186,7 @@ public class User {
 
 ```
 
-### 2.5 添加用户Web访问层Controller（springms-provider-user-mysql-jparepository/src/main/java/com/springms/cloud/controller/ProviderUserMysqlController.java）
+### 2.5 添加用户Web访问层Controller（springms-provider-user-mysql-crudrepository/src/main/java/com/springms/cloud/controller/ProviderUserMysqlCrudRepoController.java）
 ``` 
 package com.springms.cloud.controller;
 
@@ -197,8 +195,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.springms.cloud.entity.User;
-
-import java.util.List;
 
 /**
  * 用户微服务Controller。
@@ -211,7 +207,7 @@ import java.util.List;
  *
  */
 @RestController
-public class ProviderUserMysqlController {
+public class ProviderUserMysqlCrudRepoController {
 
     @Autowired
     private UserRepository userRepository;
@@ -222,14 +218,14 @@ public class ProviderUserMysqlController {
     }
 
     @GetMapping("/simple/list")
-    public List<User> findUserList() {
+    public Iterable<User> findUserList() {
         return this.userRepository.findAll();
     }
 
     /**
      * 添加一个student,使用postMapping接收post请求
      *
-     * http://localhost:8310/simple/addUser?username=user11&age=11&balance=11
+     * http://localhost:8320/simple/addUser?username=user11&age=11&balance=11
      *
      * @return
      */
@@ -246,11 +242,10 @@ public class ProviderUserMysqlController {
     }
 }
 
-
 ```
 
 
-### 2.6 添加用户微服务启动类（springms-provider-user-mysql-jparepository/src/main/java/com/springms/cloud/MsProviderUserMysqlApplication.java）
+### 2.6 添加用户微服务启动类（springms-provider-user-mysql-crudrepository/src/main/java/com/springms/cloud/MsProviderUserMysqlCrudRepoApplication.java）
 ``` 
 package com.springms.cloud;
 
@@ -258,7 +253,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * 链接Mysql数据库,通过JpaRepository编写数据库访问。
+ * 链接Mysql数据库,通过CrudRepository编写数据库访问。
  *
  * @author hmilyylimh
  *
@@ -268,11 +263,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-public class MsProviderUserMysqlApplication {
+public class MsProviderUserMysqlCrudRepoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsProviderUserMysqlApplication.class, args);
-		System.out.println("【【【【【【 链接Mysql数据库微服务 】】】】】】已启动.");
+		SpringApplication.run(MsProviderUserMysqlCrudRepoApplication.class, args);
+		System.out.println("【【【【【【 链接MysqlJpaCrud数据库微服务 】】】】】】已启动.");
 	}
 }
 
@@ -284,10 +279,10 @@ public class MsProviderUserMysqlApplication {
 
 ``` 
 /****************************************************************************************
- 一、链接Mysql数据库,通过JpaRepository编写数据库访问：
+ 一、链接Mysql数据库,通过CrudRepository编写数据库访问：
 
- 1、启动 springms-provider-user-mysql-jparepository 模块服务，启动1个端口；
- 2、在浏览器输入地址 http://localhost:8310/simple/10 可以看到用户ID=10的信息成功的被打印出来；
+ 1、启动 springms-provider-user-mysql-crudrepository 模块服务，启动1个端口；
+ 2、在浏览器输入地址 http://localhost:8320/simple/10 可以看到用户ID=10的信息成功的被打印出来；
 
  3、使用 IDEA 自带工具 Test Restful WebService 发送 HTTP POST 请求,并添加 username、age、balance三个参数，然后执行请求，并去 mysql 数据库查看数据是否存在，正常情况下 mysql 数据库刚刚插入的数据成功了:
  4、使用 REST Client 执行 "/simple/list" 接口，也正常将 mysql 数据库中所有的用户信息打印出来了；
