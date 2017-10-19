@@ -1,4 +1,4 @@
-# SpringCloud（第 040 篇）链接Mysql数据库,通过JdbcTemplate编写数据库访问
+# SpringCloud（第 041 篇）链接Mysql数据库,通过JdbcTemplate编写数据库访问
 -
 
 ## 一、大致介绍
