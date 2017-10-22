@@ -59,6 +59,7 @@
 |046	| [springms-schedule](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-schedule)| 8340 	|注解式Schedule配置定时任务|
 |047	| [springms-async](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-async)| 8345 	|注解式Async配置异步任务|
 |048	| [springms-aop-weblog](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-aop-weblog)| 8350 	|使用AOP统一处理Web请求日志|
+|049	| [Netflix Eureka 源码深入剖析](https://gitee.com/ylimhhmily/SpringCloudTutorial/blob/master/doc/flow-analysis/Eureka.md)| xxxx 	|Netflix Eureka 源码深入剖析|
 
 
 
