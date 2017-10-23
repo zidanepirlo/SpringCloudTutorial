@@ -1,4 +1,4 @@
-# SpringCloud（第 049 篇）Netflix Eureka 源码深入剖析
+# SpringCloud（第 049 篇）Netflix Eureka 源码深入剖析（上）
 -
 
 ## 一、大致介绍
@@ -6,6 +6,7 @@
 ``` 
 1、鉴于一些朋友的提问并提议讲解下eureka的源码分析，由此应运而产生的本章节的内容；
 2、所以我站在自我的理解角度试着整理了这篇Eureka源码的分析，希望对大家有所帮助；
+3、由于篇幅太长不能在一篇里面发布出来，所以拆分了上下篇；
 ```
 
 
@@ -913,12 +914,7 @@ private static Builder handleRegister(ReplicationInstance instanceInfo, Applicat
 
 ## 五、EurekaClient 启动流程分析
 
-### 5.1 xxxx
-``` 
-未完待续
-
-```
-
+详见 [SpringCloud（第 050 篇）Netflix Eureka 源码深入剖析（下）](https://gitee.com/ylimhhmily/SpringCloudTutorial/blob/master/doc/flow-analysis/Eureka_02.md)
 
 
 ## 六、下载地址
