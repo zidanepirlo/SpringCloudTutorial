@@ -61,6 +61,7 @@
 |048	| [springms-aop-weblog](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-aop-weblog)| 8350 	|使用AOP统一处理Web请求日志|
 |049	| [Netflix Eureka 源码深入剖析(上)](https://gitee.com/ylimhhmily/SpringCloudTutorial/blob/master/doc/flow-analysis/Eureka_01.md)| xxxx 	|Netflix Eureka 源码深入剖析(上)|
 |050	| [Netflix Eureka 源码深入剖析(下)](https://gitee.com/ylimhhmily/SpringCloudTutorial/blob/master/doc/flow-analysis/Eureka_02.md)| xxxx 	|Netflix Eureka 源码深入剖析(下)|
+|xxx	| [一些本人做过的功能模块整理成Demo进行分享](https://gitee.com/ylimhhmily/SpringCloudTutorial/tree/master/springms-draft-demo)| xxxx 	|一些本人做过的功能模块整理成Demo进行分享|
 
 
 

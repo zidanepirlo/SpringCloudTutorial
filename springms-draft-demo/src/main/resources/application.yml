@@ -1,0 +1,5 @@
+server:
+  port: 7777
+spring:
+  application:
+    name: springms-draft-demo  #全部小写

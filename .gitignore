@@ -95,3 +95,5 @@
 /springms-async/target
 /springms-aop-weblog/*.iml
 /springms-aop-weblog/target
+/springms-draft-demo/*.iml
+/springms-draft-demo/target
