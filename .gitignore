@@ -97,3 +97,5 @@
 /springms-aop-weblog/target
 /springms-draft-demo/*.iml
 /springms-draft-demo/target
+/springms-discovery-eureka-ha/*.iml
+/springms-discovery-eureka-ha/target

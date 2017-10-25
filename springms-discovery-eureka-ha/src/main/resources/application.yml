@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: springms-discovery-eureka-ha
+  profiles:
+    # 主要激活哪个配置文件，如果有不清楚的话，可以回头看看 Config 配置相关的知识，比如 springms-config-client、springms-config-server
+    active: peer1
+
+
+

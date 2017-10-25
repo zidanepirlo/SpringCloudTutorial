@@ -24,6 +24,12 @@ eureka:
     service-url:
       # defaultZone: http://localhost:8761/eureka/ #不需要认证
       defaultZone: http://admin:admin@localhost:8761/eureka #需要认证
+
+###################################################################################
+# 测试二：测试EurekaClient客户端注册进EurekaServer高可用集群中
+#      defaultZone: http://admin:admin@peer1:8401/eureka,,http://admin:admin@peer2:8402/eureka,,http://admin:admin@peer3:8403/eureka
+###################################################################################
+
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
