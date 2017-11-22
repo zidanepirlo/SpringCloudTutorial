@@ -76,9 +76,7 @@
 
 ## 四、交流沟通
 
-![微信二维码交流群](https://i.imgur.com/qaYQ49l.png)
-
-
+![微信二维码交流群](https://i.imgur.com/TGHehwy.png)
 
 
 
