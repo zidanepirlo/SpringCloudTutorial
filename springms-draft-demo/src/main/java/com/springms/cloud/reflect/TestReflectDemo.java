@@ -14,27 +14,27 @@ import com.springms.cloud.reflect.util.xml.BeanXml;
  *
  */
 public class TestReflectDemo {
-    
 
-    public static void main(String[] args) {
 
-        try {
-            String xmlData = getXml();
-            Class<?> beanClass = getBeanClassPath();
-
-            Object respBankDTO = BeanXml.xml2Bean(xmlData, beanClass);
-
-            ResultDTO resultObject = new ResultDTO();
-            ResultDTO.Record record = new ResultDTO.Record();
-            resultObject.setRecord(record);
-
-            boolean finished = AnnotationReflectParser.start(respBankDTO, resultObject);
-            System.out.println("finished: " + finished);
-            System.out.println("=====================================");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    public static void main(String[] args) {
+//
+//        try {
+//            String xmlData = getXml();
+//            Class<?> beanClass = getBeanClassPath();
+//
+//            Object respBankDTO = BeanXml.xml2Bean(xmlData, beanClass);
+//
+//            ResultDTO resultObject = new ResultDTO();
+//            ResultDTO.Record record = new ResultDTO.Record();
+//            resultObject.setRecord(record);
+//
+//            boolean finished = AnnotationReflectParser.start(respBankDTO, resultObject);
+//            System.out.println("finished: " + finished);
+//            System.out.println("=====================================");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     /**
      * 这里可以通过路径反射得到 Class 类，如果你的类有规律的话，那完成可以在这个地方通过设定规则出来得到类名路径。

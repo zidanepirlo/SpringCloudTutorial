@@ -357,14 +357,14 @@ public class BeanXml {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println("********************");
-        Element el = new Element("TEST");
-        el.setText("test");
-        el.setAttribute("TEST1", "TEST2");
-        el.setAttribute("TEST3", "TEST4");
-        System.out.println(element2String(el));
-    }
+//    public static void main(String[] args) {
+//        System.out.println("********************");
+//        Element el = new Element("TEST");
+//        el.setText("test");
+//        el.setAttribute("TEST1", "TEST2");
+//        el.setAttribute("TEST3", "TEST4");
+//        System.out.println(element2String(el));
+//    }
 
     public static String bean2xml2(AdapterXmlBean javabean) throws RuntimeException {
         // 参数为空时抛出异常
